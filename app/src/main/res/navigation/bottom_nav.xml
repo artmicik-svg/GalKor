@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<navigation xmlns:android="http://schemas.android.com/apk/res/android">
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:title="Glavnaya" android:icon="@drawable/ic_search" android:id="homeFragment" />
     <item android:title="Chosen ones" android:icon="@drawable/ic_menu" android:id="favoriteFragment" />
     <item android_title="Ya" android:icon="@drawable/ic_profile" android:id="profileFragment" />
