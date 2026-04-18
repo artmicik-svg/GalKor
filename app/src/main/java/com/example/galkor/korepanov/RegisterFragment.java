@@ -39,21 +39,26 @@ public class RegisterFragment extends Fragment {
         passwordInput = view.findViewById(R.id.passwordInput);
         confirmPasswordInput = view.findViewById(R.id.confirmPasswordInput);
         registerButton = view.findViewById(R.id.registerButton);
-        loginLink = view.findViewById(R.id.loginFragment);
+        loginLink = view.findViewById(R.id.loginLink);
 
-        registerButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                register();
-            }
-        });
 
-        loginLink.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Navigation.findNavController(v).navigateUp();
-            }
-        });
+        if (registerButton != null) {
+            registerButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    register();
+                }
+            });
+        }
+
+        if (loginLink != null) {
+            loginLink.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Navigation.findNavController(v).navigate(R.id.loginFragment);
+                }
+            });
+        }
     }
 
     private void register() {

@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 NavigationUI.setupWithNavController(bottomNavigationView, navController);
             }
 
-            // Проверяем, авторизован ли пользователь
+
             if (!sessionManager.isLoggedIn()) {
                 navController.navigate(R.id.loginFragment);
             }
