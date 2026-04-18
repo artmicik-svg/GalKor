@@ -43,7 +43,7 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 sessionManager.logout();
-                Navigation.findNavController(v).navigate(R.id.loginLink);
+                Navigation.findNavController(v).navigate(R.id.loginFragment);
             }
         });
     }

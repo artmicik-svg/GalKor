@@ -2,33 +2,40 @@ package com.example.galkor.galimov;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-import androidx.annotation.NonNull;
-
+@Entity(tableName = "items")
 public class Item implements Parcelable {
+    @PrimaryKey(autoGenerate = true)
     private long id;
     private String name;
     private String description;
     private double price;
     private boolean isFavorite;
     private long createdAt;
-    public Item(String name,String description,double price){
+
+    public Item(String name, String description, double price) {
         this.name = name;
         this.description = description;
         this.price = price;
         this.isFavorite = false;
         this.createdAt = System.currentTimeMillis();
     }
-    public long getId(){
+
+    public long getId() {
         return id;
     }
-    public void setId(long id){
+
+    public void setId(long id) {
         this.id = id;
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -48,14 +55,6 @@ public class Item implements Parcelable {
         this.price = price;
     }
 
-    public long getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(long createdAt) {
-        this.createdAt = createdAt;
-    }
-
     public boolean isFavorite() {
         return isFavorite;
     }
@@ -64,12 +63,20 @@ public class Item implements Parcelable {
         isFavorite = favorite;
     }
 
+    public long getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(long createdAt) {
+        this.createdAt = createdAt;
+    }
+
     protected Item(Parcel in) {
         id = in.readLong();
         name = in.readString();
         description = in.readString();
         price = in.readDouble();
-        isFavorite = in.readByte() !=0;
+        isFavorite = in.readByte() != 0;
         createdAt = in.readLong();
     }
 
@@ -91,7 +98,7 @@ public class Item implements Parcelable {
     }
 
     @Override
-    public void writeToParcel(@NonNull Parcel dest, int flags) {
+    public void writeToParcel(Parcel dest, int flags) {
         dest.writeLong(id);
         dest.writeString(name);
         dest.writeString(description);

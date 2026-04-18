@@ -39,7 +39,7 @@ public class RegisterFragment extends Fragment {
         passwordInput = view.findViewById(R.id.passwordInput);
         confirmPasswordInput = view.findViewById(R.id.confirmPasswordInput);
         registerButton = view.findViewById(R.id.registerButton);
-        loginLink = view.findViewById(R.id.loginLink);
+        loginLink = view.findViewById(R.id.loginFragment);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override

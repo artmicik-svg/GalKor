@@ -48,10 +48,11 @@ public class LoginFragment extends Fragment {
             }
         });
 
+        // ИСПРАВЛЕНО: registerFragment вместо registerLink
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.registerLink);
+                Navigation.findNavController(v).navigate(R.id.registerFragment);
             }
         });
     }
