@@ -2,19 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/loginFragment">
-
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.example.galkor.korepanov.LoginFragment"
-        android:label="Вход"
-        tools:layout="@layout/fragment_login" />
-
-    <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.example.galkor.korepanov.RegisterFragment"
-        android:label="Регистрация"
-        tools:layout="@layout/fragment_register" />
+    app:startDestination="@id/itemsListFragment">
 
     <fragment
         android:id="@+id/profileFragment"
@@ -39,12 +27,5 @@
         android:name="com.example.galkor.galimov.AddEditItemFragment"
         android:label="Добавить/Изменить"
         tools:layout="@layout/fragment_add_edit_item" />
-
-
-    <fragment
-        android:id="@+id/favoritesFragment"
-        android:name="com.example.galkor.galimov.FavoritesFragment"
-        android:label="Избранное"
-        tools:layout="@layout/fragment_favorites" />
 
 </navigation>
