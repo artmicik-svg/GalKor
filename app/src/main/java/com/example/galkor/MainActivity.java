@@ -5,20 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
-import com.example.galkor.R;
-import com.example.galkor.korepanov.SessionManager;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     private NavController navController;
-    private SessionManager sessionManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        sessionManager = new SessionManager(this);
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment);
@@ -33,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-            if (!sessionManager.isLoggedIn()) {
-                navController.navigate(R.id.loginFragment);
-            }
+
         }
     }
 }

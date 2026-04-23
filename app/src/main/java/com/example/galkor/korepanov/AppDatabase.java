@@ -8,12 +8,12 @@ import android.content.Context;
 import com.example.galkor.galimov.Item;
 import com.example.galkor.galimov.ItemDao;
 
-@Database(entities = {Item.class, User.class}, version = 1)
+@Database(entities = {Item.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase instance;
 
     public abstract ItemDao itemDao();
-    public abstract UserDao userDao();
+
 
     public static synchronized AppDatabase getInstance(Context context) {
         if (instance == null) {
